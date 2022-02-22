@@ -1,0 +1,139 @@
+*{
+            font-family: verdana;
+            margin: 0;
+        }
+        #conteiner{
+            width: 100%;
+            margin: 0 auto;
+            max-width: 1000px
+        }
+        header{
+            background-color: #00f;
+            color:#fff;
+        }
+        nav{
+            background-color: #ddd;
+            text-align: center;
+        }
+        nav ol{
+            /* estilo da lista= nenhum */
+            list-style: none;
+        }
+        nav ol li{
+            /* alinha os itens dentro da nav */
+            display: inline;
+            /* transforma as letras em maiúsculas */
+            text-transform: uppercase;
+        }
+        nav ol li a{
+            padding: 10px;
+            /* inline-block=descola da parte de cima */
+            display: inline-block;
+            color:#000;
+            text-decoration: none;
+            border-bottom:#00f solid;
+        }
+        /* HOVER = o item muda de cor quando é colocado o mouse em cima  */
+        nav ol li a:hover{
+            color:#fff;
+            background-color:#048
+        }
+        footer{
+            /* BORDER-TOP = borda em cima */
+            /* BORDER-BOTTOM = borda embaixo */
+            /* TEXT-ALIGN:CENTER = centraliza os itens */
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 20px;
+            text-align:center;
+        }
+        #principal{
+            text-align: center;
+        }
+        figure{
+            background-color:#000;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            /* border-radius = dx a borda arredondada */
+            border-radius: 10px;
+            text-align: center;
+            /* OPACITY = dx a imagem transparente */
+            opacity: 0.8;
+            
+        }
+        figure:hover{
+            opacity: 1;
+        }
+        figcaption a{
+            color:#fff;
+            /* text-decoration= tira a linha da palavra linkada */
+            text-decoration: none;
+        }
+        #principal h1{
+            color: #000;
+            padding: 20px;
+            text-transform:uppercase;
+            border-bottom: 7px solid #000;
+        }
+        table{
+            margin: 20px auto;
+            width: 80%;
+        }
+        th{
+            background-color: #00f;
+            color:#fff;
+            padding: 10px;
+        }
+        td{
+            padding: 5px;
+        }
+        .listra{
+            background-color: #ddd;
+        }
+        td{
+            padding: 10px;
+        }
+        table, th, td{
+            border:1px solid #000;
+        }
+        tr:hover{
+            background-color: #00f;
+            color:azure
+        }
+        form{
+            padding: 15px;
+        }
+        .grupo{
+            padding: 10px;
+            
+        }
+        /* SELECT = ocupa a linha toda  */
+        /* TEXTAREA = a area de texto ocupA 100% da tela */
+        /* HEIGHT = aumenta internamente */
+        .grupo input, select{
+            width: 100%;
+            height: 25px;
+            border: 4px solid #888;
+            border-radius: 10px;
+        }
+        /* :FOCUS = quando vc clica(focando) no item desejado */
+        .grupo input:focus, select:focus, textarea:focus{
+            border:6px solid #00f;
+        }
+        textarea{
+            width: 100%;
+            height: 50px;
+        }
+        .genero{
+            /* !IMPORTANT = comando para sobrepor um comendo no css quando a conflito entre dois ou mais estilos */
+            width: 12px !important;
+            height: 12px !important;
+        }
+        form{
+            padding: 15px;
+            width:80%;
+            margin: 0 auto;
+            text-align: left;
+
+        }

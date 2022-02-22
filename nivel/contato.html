@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível Games vc é o player</title>
+    <!-- (<link rel="stylesheet" href="css/style.css">) = link esse pagina(index.html) com o (#style.css) -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- (<link rel="icon" href="imagens/favicon.png" type="image/png">) = por um icone na barra de titulo  -->
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
+        
+</head>
+<body>
+    <div id="conteiner">
+        <header>
+            <center><h1>Nível Games</h1></center>
+        </header>
+            <nav>
+              <ol>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="consoles.html">consoles</a></li>
+                  <li><a href="jogos.html">jogos</a></li>
+                  <li><a href="multimidia.html">multimidia</a></li>
+                  <li><a href="contato.html">contato</a></li>
+                  <li><a href="horario.html">horario</a></li>
+                  <li><a href="comochegar.html">como chegar</a></li>
+                
+              </ol>
+            </nav>
+            <section id="principal">
+              <h1>contato</h1>
+              <!-- form = formulario -->
+              <!--LABEL= um rótulo -->
+              <!--( METHOD = post )= não visivel (METHOD=get) = visivel-->
+              <form action="index.html" method="post">
+                    <div class="grupo">
+                      <label for="nome">Nome</label>
+                      <!-- placeholder = msgn dentro do input -->
+                      <!-- INPUT = entrada(a pessoa vai digitar alguma informacão) -->
+                      <!-- TYPE = (text),(email),(number),(hidden = codigo escondido),(date = data),(tel = numeros e caracteres),(password = senha),(submit = botão),(radio = escolhe uma opção),(checkbox = escolhe mais de uma opção) -->
+                      <!-- VALUE = serve pra botar um valor dentro do campo -->
+                      <!-- READONLY = somente leitura -->
+                      <!-- BUTTON = botão do formulario -->
+                      <!-- REQUIRED = informação obrigatória -->
+                      <!-- EM JAVA SCRIPT(onclick) = aperto no item e a mensagem aparece -->
+                      <!-- ONBLUR = apaga o item errado(sair ao foco                                                                                                                                                      ) -->
+                      <input type="text" id="nome" placeholder ="Digite seu nome aqui" name="nome" required />
+                    </div>
+                    <div class="grupo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder ="Digite seu E-mail aqui" name="email" required/>
+                    </div>
+                    <div class="grupo">
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" placeholder ="Digite sua Idade aqui" name="idade" min="0" max="200"/>
+                    </div>
+                    <div class="grupo">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input type="tel" id="nascimento" placeholder ="Digite sua Data de Nascimento aqui" name="nascimento" required/>
+                    </div>
+                    <div class="grupo">
+                        <label for="fone">Telefone</label>
+                        <input type="tel" id="fone" placeholder ="Digite seu Telefone aqui" name="fone" required/>
+                    </div>
+                    <div class="grupo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder ="Digite sua senha aqui" name="senha"  required/>
+                        <a  onclick="ver()" id="btn">ver senha</a>
+                    </div>
+                    <div class="grupo">
+                        <label for="csenha">Confirme sua Senha</label>
+                        <input type="password" id="csenha" placeholder ="Digite sua senha aqui" name="csenha" required onblur="verifica()"/>
+                    </div>
+                    <div class="grupo">
+                        <label for="setor">Setor</label>
+                        <!-- SELECT = seleciona --> <!-- OPTION = opção -->
+                        <select name="setor" id="setor">
+                            <option value="financeiro">Financeiro</option>
+                            <option value="jogos">Jogos</option>
+                            <option value="consoles">Consoles</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="grupo">
+                        <label for="genero">Genero</label>
+                        <div>
+                            <!-- CHECKED = ja deixa marcado -->
+                            <input class="genero" checked type="radio" name="genero" value="m" id="masc"/>
+                            <label for="masc">Masculino</label>
+                            <input class="genero" type="radio" name="genero" value="f" id="femi"/>
+                            <label for="femi">Feminino</label>
+                        </div>
+                    </div>
+                    <div class="grupo">
+                        <!-- TEXTAREA = area de mensagem -->
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="msg" id="mensagem" placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    <button type="Submit">Enviar</button>
+                    
+              </form>
+            </section>
+            <footer>
+                <p>Rua Ewbank da câmara</p>
+            </footer>
+    </div>
+    
+</body>
+</html>
+<script>
+    function verifica(){
+        a = document.getElementById("senha").value;
+        b = document.getElementById("csenha").value;
+        if(a!=b){
+            alert("senhas não conferem");
+            document.getElementById("senha").value = "";
+            document.getElementById("csenha").value = "";
+            document.getElementById("senha").focus();
+        }
+    }
+    function ver(){
+       a = document.getElementById("senha").type;
+       if(a == "password"){
+           document.getElementById("senha").type = "text";
+           document.getElementById("btn").innerHTML = "Ocultar";
+       }else{
+        document.getElementById("senha").type = "password";
+        document.getElementById("btn").innerHTML = "ver senha";
+       }
+    }
+    // function teste(){
+    //     alert("funcionario")
+    // }
+
+    // alert = mensagem 
+    // prompt = caixa de texto
+    //  document.getElementById = a mesnsagem digitada no PROMPT aparece na tela
+
+//    let a = prompt("Digite seu Nome");
+//    document.getElementById("nome").value = a;
+</script>
